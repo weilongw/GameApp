@@ -5,7 +5,7 @@ class GamesController < ApplicationController
     @games = Game.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index_backup.html.erb
       format.json { render json: @games }
     end
   end
