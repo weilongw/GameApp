@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GameApp</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%=  render 'layouts/shim' %>
 </head>
 <body>
 
-<%= yield %>
-please contact me for more info
+<%= render 'layouts/header' %>
+<div class="container">
+  <%= yield %>
+</div>
+<%= render 'layouts/footer' %>
 
 </body>
 </html>
