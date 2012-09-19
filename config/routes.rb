@@ -1,4 +1,6 @@
 GameApp::Application.routes.draw do
+  get "geeks/new"
+
   resources :examples
 
   get "users/new"

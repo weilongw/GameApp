@@ -1,10 +1,11 @@
 # == Schema Information
 #
-# Table name: games
+# Table name: geeks
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  user_id    :integer
+#  email      :string(255)
+#  game_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -13,8 +14,10 @@
 
 one:
   name: MyString
-  user_id: 1
+  email: MyString
+  game_id: 1
 
 two:
   name: MyString
-  user_id: 1
+  email: MyString
+  game_id: 1
