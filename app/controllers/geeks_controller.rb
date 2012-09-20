@@ -10,6 +10,7 @@ class GeeksController < ApplicationController
   def create
     @user = Geek.new(params[:geek])
     if @user.save
+      sign_in @user
       flash[:success]="Welcome to GameApp"
       redirect_to @user
     else
