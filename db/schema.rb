@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120920022029) do
+ActiveRecord::Schema.define(:version => 20120920082037) do
 
   create_table "examples", :force => true do |t|
     t.string   "name"
@@ -30,10 +30,11 @@ ActiveRecord::Schema.define(:version => 20120920022029) do
     t.string   "name"
     t.string   "email"
     t.integer  "game_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "password_digest"
     t.string   "remember_token"
+    t.boolean  "admin",           :default => false
   end
 
   add_index "geeks", ["email"], :name => "index_geeks_on_email", :unique => true
