@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+
+  paginate:
+    previous: "<big><i>&lt; Previous</i></big>"
+    next: "<big><i>Next &gt;</i></big>"
+    truncate: "..."
+    page: "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"

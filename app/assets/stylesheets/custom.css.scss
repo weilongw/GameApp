@@ -34,6 +34,12 @@ $grayMediumLight: #eaeaea;
   @include box_sizing;
 }
 
+.paginate li{
+  display: inline;
+
+  clear:both;
+}
+
 /* sidebar */
 
 aside {
