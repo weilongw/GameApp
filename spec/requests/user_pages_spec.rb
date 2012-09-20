@@ -19,7 +19,7 @@ describe "User pages" do
       before(:all) { 30.times { FactoryGirl.create(:geek) } }
       after(:all)  { Geek.delete_all }
 
-      it { should have_selector('div.pagination') }
+
 
       it "should list each user" do
         Geek.paginate(page: 1).each do |user|
@@ -39,10 +39,17 @@ describe "User pages" do
   describe "profile page" do
     # Code to make a user variable
     let(:geek) {FactoryGirl.create(:geek)}
+    let!(:m1) { FactoryGirl.create(:play, geek: geek, content: "Foo") }
+    let!(:m2) { FactoryGirl.create(:play, geek: geek, content: "Bar") }
     before { visit geek_path(geek) }
 
     it { should have_selector('h1',    text: geek.name) }
     it { should have_selector('title', text: geek.name) }
+    describe "plays" do
+      it { should have_content(m1.content) }
+      it { should have_content(m2.content) }
+      it { should have_content(geek.plays.count) }
+    end
   end
 
   describe "signup" do

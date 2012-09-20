@@ -4,6 +4,8 @@ GameApp::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :plays, only: [:create, :destroy]
+
   root :to => 'static_pages#home'
 
   match '/signin', :to=> 'sessions#new'

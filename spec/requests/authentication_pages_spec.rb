@@ -77,6 +77,18 @@ describe "AuthenticationPages" do
           end
         end
       end
+      describe "in the Plays controller" do
+
+        describe "submitting to the create action" do
+          before { post plays_path }
+          specify { response.should redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete play_path(FactoryGirl.create(:play)) }
+          specify { response.should redirect_to(signin_path) }
+        end
+      end
     end
     describe "as wrong user" do
       let(:geek) { FactoryGirl.create(:geek) }

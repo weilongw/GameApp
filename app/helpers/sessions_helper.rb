@@ -33,4 +33,12 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url
   end
+
+  def signed_in_user
+    if !signed_in?
+      store_location
+      flash[:notice] = "Please sign in."
+      redirect_to signin_path
+    end
+  end
 end

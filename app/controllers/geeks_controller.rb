@@ -8,11 +8,12 @@ class GeeksController < ApplicationController
   end
 
   def index
-    @users = Geek.page(params[:page])
+    @users = Geek.all.paginate(page: params[:page])
   end
 
   def show
     @user = Geek.find(params[:id])
+    @plays = @user.plays.paginate(page: params[:page])
   end
 
   def create
@@ -46,13 +47,6 @@ class GeeksController < ApplicationController
     redirect_to geeks_path
   end
   private
-    def signed_in_user
-      if !signed_in?
-        store_location
-        flash[:notice] = "Please sign in."
-        redirect_to signin_path
-      end
-    end
 
     def correct_user
       @user = Geek.find(params[:id])

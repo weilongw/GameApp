@@ -28,6 +28,7 @@ describe Geek do
   it { should respond_to(:remember_token) }
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:plays) }
   it { should be_valid }
 
   describe "remember token" do
@@ -66,5 +67,28 @@ describe Geek do
   describe "when name is not present" do
     before { @user.name = " " }
     it { should_not be_valid }
+  end
+
+  describe "micropost associations" do
+
+    before { @user.save }
+    let!(:older_play) do
+      FactoryGirl.create(:play, geek: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_play) do
+      FactoryGirl.create(:play, geek: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right microposts in the right order" do
+      @user.plays.should == [newer_play, older_play]
+    end
+    it "should destroy associated microposts" do
+      plays = @user.plays
+      @user.destroy
+      plays.each do |play|
+        play.find_by_id(play.id).should be_nil
+      end
+    end
+
   end
 end

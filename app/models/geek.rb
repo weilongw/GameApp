@@ -21,6 +21,7 @@ class Geek < ActiveRecord::Base
   before_save :create_remember_token
   validates :password, :presence => true, :length => {:minimum => 6}
   validates :password_confirmation, :presence => true
+  has_many :plays, dependent: :destroy
 
   private
     def create_remember_token
