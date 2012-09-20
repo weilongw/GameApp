@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="05ddcedc-8782-48ba-901c-37dc9e928d3e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="GameApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,15 +25,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/geeks/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="36" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_error_messages.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_error_messages.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="7" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,7 +60,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="40" selection-start="447" selection-end="447" vertical-scroll-proportion="-10.625">
+            <state line="17" column="40" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,7 +78,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="20" selection-start="823" selection-end="823" vertical-scroll-proportion="0.5432692">
+            <state line="31" column="21" selection-start="708" selection-end="708" vertical-scroll-proportion="0.23239437">
               <folding />
             </state>
           </provider>
@@ -108,6 +97,15 @@
         <entry file="file://$PROJECT_DIR$/app/helpers/geeks_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="45" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_error_messages.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/_error_messages.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="7" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,10 +144,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="426" />
-    <option name="y" value="45" />
-    <option name="width" value="1292" />
-    <option name="height" value="792" />
+    <option name="y" value="52" />
+    <option name="width" value="1366" />
+    <option name="height" value="715" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -177,7 +174,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -472,17 +468,18 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Development: GameApp">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -728,14 +725,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="426" y="45" width="1292" height="792" extended-state="0" />
+    <frame x="0" y="52" width="1366" height="715" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38443017" sideWeight="0.68115944" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23176292" sideWeight="0.68115944" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -810,9 +807,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/geek_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="67" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="39" column="67" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/factories.rb">
@@ -822,23 +817,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="13" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="13" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/requests/user_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="61" selection-start="846" selection-end="846" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="35" column="61" selection-start="846" selection-end="846" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/geeks_helper.rb">
@@ -892,7 +881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="40" selection-start="447" selection-end="447" vertical-scroll-proportion="-10.625">
+        <state line="17" column="40" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -906,7 +895,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="20" selection-start="823" selection-end="823" vertical-scroll-proportion="0.5432692">
+        <state line="31" column="21" selection-start="708" selection-end="708" vertical-scroll-proportion="0.23239437">
           <folding />
         </state>
       </provider>
