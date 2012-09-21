@@ -29,6 +29,12 @@ describe Geek do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:plays) }
+  it { should respond_to(:followed_users) }
+  it { should respond_to(:following?) }
+  it { should respond_to(:follow!) }
+  it { should respond_to(:unfollow!) }
+  it { should respond_to(:reverse_relationships) }
+  it { should respond_to(:followers) }
   it { should be_valid }
 
   describe "remember token" do
@@ -69,7 +75,7 @@ describe Geek do
     it { should_not be_valid }
   end
 
-  describe "micropost associations" do
+  describe "play associations" do
 
     before { @user.save }
     let!(:older_play) do
@@ -79,10 +85,10 @@ describe Geek do
       FactoryGirl.create(:play, geek: @user, created_at: 1.hour.ago)
     end
 
-    it "should have the right microposts in the right order" do
+    it "should have the right plays in the right order" do
       @user.plays.should == [newer_play, older_play]
     end
-    it "should destroy associated microposts" do
+    it "should destroy associated plays" do
       plays = @user.plays
       @user.destroy
       plays.each do |play|
@@ -90,5 +96,27 @@ describe Geek do
       end
     end
 
+  end
+  describe "following" do
+    let(:other_user) { FactoryGirl.create(:geek) }
+    before do
+      @user.save
+      @user.follow!(other_user)
+    end
+
+    it { should be_following(other_user) }
+    its(:followed_users) { should include(other_user) }
+
+    describe "and unfollowing" do
+      before { @user.unfollow!(other_user) }
+
+      it { should_not be_following(other_user) }
+      its(:followed_users) { should_not include(other_user) }
+    end
+
+    describe "followed user" do
+      subject { other_user }
+      its(:followers) { should include(@user) }
+    end
   end
 end

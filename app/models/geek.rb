@@ -22,9 +22,27 @@ class Geek < ActiveRecord::Base
   validates :password, :presence => true, :length => {:minimum => 6}
   validates :password_confirmation, :presence => true
   has_many :plays, dependent: :destroy
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_users, through: :relationships, source: :followed
+  has_many :reverse_relationships, foreign_key: "followed_id",
+                                    class_name: "Relationship",
+                                    dependent: :destroy
+  has_many :followers, through: :reverse_relationships, source: :follower
 
   def feed
      Play.where("geek_id = ?", id)
+  end
+
+  def following?(other_geek)
+    relationships.find_by_followed_id(other_geek.id)
+  end
+
+  def follow!(other_geek)
+    relationships.create!(followed_id: other_geek.id)
+  end
+
+  def unfollow!(other_geek)
+    relationships.find_by_followed_id(other_geek.id).destroy
   end
 
   private

@@ -16,10 +16,6 @@ describe "Play pages" do
         expect { click_button "Post" }.not_to change(Play, :count)
       end
 
-      describe "error messages" do
-        before { click_button "Post" }
-        it { should have_content('error') }
-      end
     end
 
     describe "with valid information" do

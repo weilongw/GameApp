@@ -1,10 +1,16 @@
 GameApp::Application.routes.draw do
 
-  resources :geeks
+  resources :geeks do
+    member do
+      get :following, :followers
+    end
+  end
 
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :plays, only: [:create, :destroy]
+
+  resources :relationships, only: [:create, :destroy]
 
   root :to => 'static_pages#home'
 
