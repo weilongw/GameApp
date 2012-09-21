@@ -1,0 +1,8 @@
+<li>
+  <%= gravatar_for geek, 60 %>
+  <%= link_to geek.name, geek %>
+  <% if current_user.admin? && !current_user?(geek) %>
+      | <%= link_to "delete", geek, method: :delete,
+                    data: { confirm: "You sure?" } %>
+  <% end %>
+</li>

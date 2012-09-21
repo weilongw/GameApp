@@ -30,7 +30,7 @@ class Geek < ActiveRecord::Base
   has_many :followers, through: :reverse_relationships, source: :follower
 
   def feed
-     Play.where("geek_id = ?", id)
+     Play.from_users_followed_by(self)
   end
 
   def following?(other_geek)
