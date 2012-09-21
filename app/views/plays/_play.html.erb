@@ -4,4 +4,9 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(play.created_at) %> ago.
   </span>
+  <% if current_user?(play.geek) %>
+      <%= link_to "delete", play, method: :delete,
+                  data: { confirm: "You sure?" },
+                  title: play.content %>
+  <% end %>
 </li>
