@@ -23,6 +23,10 @@ class Geek < ActiveRecord::Base
   validates :password_confirmation, :presence => true
   has_many :plays, dependent: :destroy
 
+  def feed
+     Play.where("geek_id = ?", id)
+  end
+
   private
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
